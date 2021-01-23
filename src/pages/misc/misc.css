@@ -1,0 +1,33 @@
+.z2 {
+  background: rgb(207, 130, 14);
+  z-index: 2;
+}
+
+form {
+  padding: 10px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #99e6ff;
+  color: #00131a;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 7px 7px rgba(255, 102, 0, 0.4);
+}
+
+#myBtn:hover {
+  background-color: #0086b3;
+  border-top: 3px solid #00131a;
+  border-right: 1px solid #00131a;
+  border-left: 1px solid #00131a;
+  box-shadow: 0 7px 7px rgba(65, 27, 2, 0.4);
+}

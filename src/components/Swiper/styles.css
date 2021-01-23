@@ -1,0 +1,8 @@
+.swiper-container {
+  width: 500px;
+  list-style: none;
+}
+
+.swiper-wrapper {
+  padding-inline-start: 0;
+}
