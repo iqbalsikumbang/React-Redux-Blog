@@ -42,7 +42,8 @@ export default function Slide({
           <p style={par}>{body1}</p>
           <p style={par}>{body2}</p>
         </div>
-        
+        <img src={img2} alt="kpop-img" className="slid" />
+        <img src={img3} alt="kpop-img" className="slid" />
       </div>
       <div id="slide2" style={bgImg2} className="slide">
         <div className="title">
@@ -50,8 +51,7 @@ export default function Slide({
           <p style={par}>{body3}</p>
           <p style={par}>{body4}</p>
         </div>
-        <img src={img2} alt="kpop-img" className="slid" />
-        <img src={img3} alt="kpop-img" className="slid" />
+        
       </div>
 
       <div id="slide3" style={bgImg3} className="slide">
@@ -60,6 +60,8 @@ export default function Slide({
           <p style={par}>{body5}</p>
           <p style={par}>{body6}</p>
         </div>
+        <img src={img1} alt="kpop-img" className="slid" />
+        <img src={img4 ? img4 : img3} alt="kpop-img" className="slid" />
       </div>
 
       {title4 && <div id="slide4" style={bgImg4} className="slide">
@@ -68,8 +70,7 @@ export default function Slide({
           <p style={par}>{body7}</p>
           <p style={par}>{body8}</p>
         </div>
-        <img src={img1} alt="kpop-img" className="slid" />
-        <img src={img4 ? img4 : img3} alt="kpop-img" className="slid" />
+        
       </div>}
     </React.Fragment>
   );
