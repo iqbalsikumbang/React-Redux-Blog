@@ -1,30 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination } from 'swiper'
+import SwiperCore, { Navigation, Pagination, Thumbs, Controller } from 'swiper'
 import 'swiper/swiper-bundle.css'
 import './styles.css'
 
-SwiperCore.use([Navigation, Pagination])
+SwiperCore.use([Navigation, Pagination, Thumbs, Controller])
 
-function Swipers({ members }) {  
+function Swipers({ members }) {
+  const [thumbSwiper, setThumbSwiper] = useState(null)
+  const [controlledSwiper, setControlledSwiper] = useState(null)
+
   const slides = (
-    <Swiper id="main" tag="section" wrapperTag="ul" navigation pagination spaceBetween={0}>
-      { members && members.map((member) => {
-        const { idolName, idolImg, idolPosition } = member;
-        return <SwiperSlide wrapperTag="li" key={idolName}><h3>{idolName}</h3><img src={idolImg} alt={idolName}/>
-        <p>{idolPosition}</p></SwiperSlide>
-      }) }
-    </Swiper>
+    members && members.map(member => {
+      const { idolName, idolImg, idolPosition } = member;
+      return <SwiperSlide className="idol" key={idolName}><h3>{idolName} ~ <span>{idolPosition}</span></h3><div className="box-img"><img src={idolImg[0]} alt={idolName}/></div>
+      </SwiperSlide>
+    })
+  )
+
+  const thumbs = (
+    members && members.map(member => {
+      const { idolName, idolImg} = member;
+      return <SwiperSlide tag="li" className="idol-thumb" key={idolName}><img src={idolImg[0]} alt={idolName}/>
+      </SwiperSlide>
+    })
+  )
+  // this one below contains nickname etc
+  const slides2 = (
+    members && members.map(member => {
+      const { idolName, idolImg, idolPosition } = member;
+      return <SwiperSlide className="idol" key={idolName}><h3>{idolName} ~ <span>{idolPosition}</span></h3><div className="box-img"><img src={idolImg[1]} alt={idolName}/></div>
+      </SwiperSlide>
+    })
   )
   
   return (
-    <Swiper id="main" tag="section" wrapperTag="ul" navigation pagination spaceBetween={0}>
-      {{ slides }}
-      {/* <SwiperSlide wrapperTag="li">
-        {/* <h3>{data.idolName}</h3><img src={data.idolImg} alt={data.idolName}/>
-        <p>{data.idolPosition}</p>
-      </SwiperSlide> */}
-    </Swiper>    
+    <div className="mains">
+      <div className="main">
+      <Swiper id="main" thumbs={{ swiper: thumbSwiper }} controller={{ control: controlledSwiper }} tag="section" wrapperTag="ul" navigation pagination spaceBetween={0} slidesPerView={1}>
+        { slides }
+      </Swiper>
+      <Swiper id="controller" onSwiper={setControlledSwiper}>
+        { slides2 }
+      </Swiper>
+      </div>
+      <Swiper id="thumbs" onSwiper={setThumbSwiper} spaceBetween={5} slidesPerView={4}>
+        {thumbs}
+      </Swiper>
+    </div>
   );
 }
 

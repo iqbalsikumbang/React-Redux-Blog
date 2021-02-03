@@ -1,20 +1,20 @@
 export default [{
     idolName: "Jo-Kwon",
-    idolposition: "Leader",
-    idolImg: '../img/2am/jokwonsl.png'
+    idolPosition: "Leader",
+    idolImg: ['../img/2am/jokwonsl.png', '../img/2am/jokwonhd.png']
   },
   {
     idolName: "Changmin",
-    idolposition: "Main-Vocalist",
-    idolImg: '../img/2am/changminsl.png'
+    idolPosition: "Main-Vocalist",
+    idolImg: ['../img/2am/changminsl.png', '../img/2am/changmindm.png']
   },
   {
     idolName: "Seulong",
-    idolposition: "Lead-Vocalist",
-    idolImg: '../img/2am/seulongsl.png'
+    idolPosition: "Lead-Vocalist",
+    idolImg: ['../img/2am/seulongsl.png', '../img/2am/seulongdm.png']
   },
   {
     idolName: "Jinwoon",
-    idolposition: "Main-Rapper",
-    idolImg: '../img/2am/jinwoonsl.png'
+    idolPosition: "Main-Rapper",
+    idolImg: ['../img/2am/jinwoonsl.png', '../img/2am/jinwoondm.png']
   }]

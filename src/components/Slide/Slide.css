@@ -4,6 +4,7 @@
   height: auto;
   width: 100%;
   box-sizing: border-box;
+  border-bottom: 10px solid black;
 }
 
 .slid {

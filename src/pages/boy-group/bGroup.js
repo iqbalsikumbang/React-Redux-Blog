@@ -45,7 +45,7 @@ class bGroup extends Component {
     
     return (
       <React.Fragment>
-        {/* {swipe} */}
+        {swipe}
         {slide}
       </React.Fragment>
     );

@@ -37,36 +37,30 @@ class Navbar extends Component {
       <><div id="fb-root"></div>
         <header className="smart-scroll">
           <nav className="active">
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li><hr />
-              <li>
-                <Link to="/news">News</Link>
-              </li><hr />
-              <li>
-                <Link to="/quiz">Quiz</Link>
-              </li><hr />
-              <li>
-                <Link
-                  to="/boy-group"
-                >
-                  Boy Group</Link>
-              </li><hr />
-              <li>
-                <Link
-                  to="/girl-group"
-                >
-                  Girl Group</Link>
-              </li><hr />
-              <li>
-                <a href="#connect">Contact</a>
-              </li><hr />
-              <li>
-                <a href="#search">
-                  <i className="fas fa-search"></i>
-                </a>
-              </li>
+            <ul>              
+                <li className="home">
+                  <Link to="/">Sakato</Link>
+                </li><hr /> 
+                <li className="menu">
+                  <Link to="/news">News</Link>
+                </li><hr />
+                <li className="menu">
+                  <Link
+                    to="/boy-group"
+                  >
+                    Boy Group</Link>
+                </li><hr />
+                <li className="menu">
+                  <Link
+                    to="/girl-group"
+                  >
+                    Girl Group</Link>
+                </li><hr />
+                <li className="search">
+                  <a href="#search">
+                    <i className="fas fa-search"></i>
+                  </a>
+                </li>
             </ul>
           </nav>
           <div className="menu-toggle">
