@@ -54,7 +54,7 @@ export default class Footer extends Component {
             </div>
             <hr className="light-100" />
             <div className="col-12 es pt-2">              
-              <marquee>sakato-web.netlify.app &copy; 2021</marquee>
+              <p>sakato-web.netlify.app &copy; 2021</p>
             </div>
           </div>
         </div>
